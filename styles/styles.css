@@ -6,6 +6,7 @@
 body {
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
 }
 
 .profile {
@@ -21,6 +22,7 @@ body {
   row-gap: 20px;
   grid-template: 2fr/ 1fr;
   grid-column-start: 2;
+  grid-row-start: 1;
 }
 
 .header--up {
@@ -96,13 +98,65 @@ body {
 }
 
 .buttons--button {
-  background-color: red;
+  margin-right: 20px;
+  padding: 10px 30px;
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
 }
 
 .sidebar {
+  padding-left: 30px;
+  display: grid;
+  align-content: start;
+  row-gap: 20px;
   grid-column-start: 1;
+  grid-row: 1 / span 2;
+  background-color: var(--primary-color);
+}
+
+.sidebar--logo {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.logo--name {
+  color: white;
+}
+
+.sidebar--logo>img {
+  width: 80px;
+  filter: invert();
 }
 
 .main {
   grid-column-start: 2
+}
+
+
+.nav--list,
+.help--list {
+  padding: 0;
+  list-style: none;
+}
+
+.nav--list li,
+.help--list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+
+li>img {
+  width: 30px;
+  filter: invert();
+  margin-right: 15px;
 }
