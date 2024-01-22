@@ -1,6 +1,7 @@
 :root {
   --secondary-bg: #e2e8f0;
   --primary-color: #1992D4;
+  --border-color: #F0B429;
 }
 
 body {
@@ -159,4 +160,21 @@ li>img {
   width: 30px;
   filter: invert();
   margin-right: 15px;
+}
+
+.project--icons img {
+  width: 30px;
+}
+
+.projects--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  background: var(--secondary-bg);
+}
+
+.grid--project {
+  border-radius: 10px;
+  background: white;
+  border-left: 6px solid var(--border-color);
 }
